@@ -12,4 +12,4 @@ max_kernel_size=$((512 * KERNEL_SECTORS))
 pad_bytes=$((max_kernel_size - kernel_size))
 dd if=/dev/zero bs=1 count=$pad_bytes >> out/kernel.bin 2>/dev/null
 cat out/boot.bin out/kernel.bin > out/os.img
-echo "Built out/os.img ($(stat -c%s out/os.img) bytes)"
+echo "built os.img"
