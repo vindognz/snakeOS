@@ -1,7 +1,7 @@
 # snakeOS
 
 snakeOS is an operating system that does exactly one thing:
-**Play Snake.**
+Play Snake.
 
 Written in pure x86 Assembly and designed to run in 16 bit real mode. Cream gravy.
 
