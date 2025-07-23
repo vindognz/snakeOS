@@ -3,7 +3,7 @@
 snakeOS is an operating system that does exactly one thing:
 **Play Snake.**
 
-Written in pure x86 Assembly and designed to run in 16 bit real mode.
+Written in pure x86 Assembly and designed to run in 16 bit real mode. Cream gravy.
 
 
 
@@ -52,14 +52,12 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode.
 
 ## Controls
 
-* `W` `A` `S` `D` — Move
-* `R` — Reset
+* `W` `A` `S` `D` - You know what this does.
+* `R` - Reset
 * First to reach the goal wins. Don't crash into yourself.
 
 
 
 
 ## Notes
-
-* Built to be extremely minimal. There are no BIOS extensions, no input buffering. just Snake.
 * Cream Gravy
