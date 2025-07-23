@@ -1,14 +1,10 @@
-Here's an updated version of your `README.md` for **snakeOS**, cleaned up with clearer formatting, proper sections, and placeholder commands filled in where appropriate:
-
----
-
 # snakeOS
 
 snakeOS is an operating system that does exactly one thing:
 **Play Snake.**
 Written in pure x86 Assembly and designed to run in 16 bit real mode.
 
----
+
 
 ## Requirements
 
@@ -18,7 +14,7 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode.
 * A USB stick
 * A machine that can boot in legacy BIOS mode
 
----
+
 
 ## Installation & Running
 
@@ -36,7 +32,7 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode.
    qemu-system-i386 -drive format=raw,file=out/os.img,index=0,if=floppy
    ```
 
----
+
 
 ### Real Hardware
 
@@ -50,7 +46,8 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode.
 
 2. Reboot your PC and boot from USB in legacy BIOS mode (disable UEFI if needed).
 
----
+
+
 
 ## Controls
 
@@ -58,7 +55,8 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode.
 * `R` — Reset
 * First to reach the goal wins. Don't crash into yourself.
 
----
+
+
 
 ## Notes
 
