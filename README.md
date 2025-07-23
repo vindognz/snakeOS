@@ -61,7 +61,3 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode.
 ## Notes
 
 * Built to be extremely minimal. There are no BIOS extensions, no input buffering. just Snake.
-
----
-
-Let me know if you want a version with screenshots, a badge, or GitHub Actions build status.
