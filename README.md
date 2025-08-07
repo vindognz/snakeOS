@@ -54,4 +54,3 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode. Cream grav
 
 * `W` `A` `S` `D` - You know what this does.
 * `R` - Reset
-* First to reach the goal wins. Don't crash into yourself.
