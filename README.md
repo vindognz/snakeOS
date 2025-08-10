@@ -43,7 +43,7 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode. Cream grav
    sudo dd if=out/os.img of=/dev/sdX bs=512 conv=fsync
    ```
 
-   > Remember to replace `/dev/sdX` with your actual USB device. Please be careful.
+   remember to replace `/dev/sdX` with your actual USB device lololol
 
 2. Reboot your PC and boot from USB in legacy BIOS mode (disable UEFI if needed).
 
