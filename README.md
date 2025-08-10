@@ -7,27 +7,27 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode. Cream grav
 
 
 
-## Requirements
+## requirements
 
 * `nasm` (for assembling)
 * `qemu` (for emulation)
-* `dd` (for writing to USB)
-* A USB stick
-* A machine that can boot in legacy BIOS mode
+* `dd` (for writing to usb)
+* a usb stick
+* a machine that can boot in legacy bios mode
 
 
 
-## Installation & Running
+## installation & running
 
-### Emulation
+### emulation
 
-1. Run the build script:
+1. run the build script:
 
    ```bash
    ./build.sh
    ```
 
-2. Boot with QEMU:
+2. boot with qemu:
 
    ```bash
    qemu-system-i386 -drive format=raw,file=out/os.img,index=0,if=floppy
@@ -35,22 +35,22 @@ Written in pure x86 Assembly and designed to run in 16 bit real mode. Cream grav
 
 
 
-### Real Hardware
+### real hardware
 
-1. Flash to USB:
+1. burn to usb:
 
    ```bash
    sudo dd if=out/os.img of=/dev/sdX bs=512 conv=fsync
    ```
 
-   remember to replace `/dev/sdX` with your actual USB device lololol
+   remember to replace `/dev/sdX` with your actual usb device lololol
 
-2. Reboot your PC and boot from USB in legacy BIOS mode (disable UEFI if needed).
-
-
+2. reboot your computer and boot from usb in legacy bios mode (disable uefi if needed)
 
 
-## Controls
 
-* `W` `A` `S` `D` - You know what this does.
-* `R` - Reset
+
+## controls
+
+* `W` `A` `S` `D` - you know what this does
+* `R` - reset
