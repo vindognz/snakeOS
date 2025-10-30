@@ -13,6 +13,7 @@ start:
     mov [bootdrv], dl
 
     mov si, loading_msg
+
 .print_char:
     lodsb
     or al,al
@@ -20,6 +21,7 @@ start:
     mov ah,0x0E
     int 0x10
     jmp .print_char
+    
 .done_print:
 
     mov ax, 0x0000
