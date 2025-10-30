@@ -246,3 +246,12 @@ game_lost:
 reset:
     xor ah, ah
     int 16h
+    
+    mov word [playerX], 40
+    mov word [playerY], 12
+    mov word [appleX], 16
+    mov word [appleY], 8
+    mov byte [direction], 4
+    mov word [snakeLength], 1
+
+    jmp setup_game
