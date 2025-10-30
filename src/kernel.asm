@@ -143,18 +143,26 @@ get_player_input:
     jmp check_apple
 
 w_pressed:
+    cmp byte [direction], DOWN
+    je check_apple              ; stop up if going down
     mov bl, UP
     jmp check_apple
 
 s_pressed:
+    cmp byte [direction], UP
+    je check_apple              ; stop down if going up
     mov bl, DOWN
     jmp check_apple
 
 a_pressed:
+    cmp byte [direction], RIGHT
+    je check_apple              ; stop left if going right
     mov bl, LEFT
     jmp check_apple
     
 d_pressed:
+    cmp byte [direction], LEFT
+    je check_apple              ; stop right if going left
     mov bl, RIGHT
     jmp check_apple
 
