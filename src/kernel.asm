@@ -140,6 +140,8 @@ get_player_input:
     je d_pressed
     cmp al, 'r'
     je r_pressed
+    cmp al, 0x0D       ; Enter key
+    je pause_game
     jmp check_apple
 
 w_pressed:
@@ -168,6 +170,20 @@ d_pressed:
 
 r_pressed:
     int 19h
+pause_game:
+    ; show the "PAUSED" message
+    mov dword [ES:0x0000], 1F411F50h  ; "PA"
+    mov dword [ES:0x0004], 1F531F55h  ; "US"
+    mov dword [ES:0x0008], 1F441F45h  ; "ED"
+.wait_unpause:
+    mov ah, 1
+    int 16h
+    jz .wait_unpause
+    xor ah, ah
+    int 16h
+    cmp al, 0x0D       ; wait for ENTER to unpause
+    jne .wait_unpause
+    jmp game_loop      ; resume game
 
 check_apple:
     mov byte [direction], bl
@@ -180,7 +196,7 @@ check_apple:
     inc word [snakeLength]
 
 next_apple:
-    ;; Random X position
+    ;; random X position
     xor ah, ah
     int 1Ah
     mov ax, dx
@@ -188,7 +204,7 @@ next_apple:
     mov cx, SCREENW
     div cx
     mov word [appleX], dx
-    ;; Random Y position
+    ;; random Y position
     xor ah, ah
     int 1Ah
     mov ax, dx
